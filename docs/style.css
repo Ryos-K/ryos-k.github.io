@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/*
+    Header 
+ */
+
+header {
+    background-color:black;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 2px;
+}
+
+.header-content h1 {
+    color: white;
+    margin: 0;
+}   
+
+.header-nav-list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+}
+
+.header-nav-item a {
+    color: white;
+    text-decoration: none;
+    font-size: x-large;
+    margin: 0 10px;
+}
+
+.header-nav-item a:hover {
+    color:darkseagreen;
+}
+
+/*
+    Main
+ */
+
+main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.main-content {
+    width: 100%;
+    max-width: 1200px;
+    padding: 2px;
+}
+
+.section-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    margin: 0;
+}
+
+/* horizontal lines to both sides of the title */
+.section-title::before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #c7c7c7;
+    margin: 0 15px; 
+}
+.section-title::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #c7c7c7;
+    margin: 0 15px; 
+}
+
+/*
+    Main:Background
+ */
+
