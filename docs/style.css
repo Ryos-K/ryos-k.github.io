@@ -5,10 +5,14 @@
  */
 
 header {
+    position: fixed;
+    top: 0;
     background-color: black;
     display: flex;
     justify-content: center;
     width: 100%;
+    height: 64px;
+    z-index: 100;
 }
 
 .header-content {
@@ -51,6 +55,7 @@ main {
     display: flex;
     justify-content: center;
     width: 100%;
+    margin-top: 64px;
 }
 
 .main-content {
@@ -174,7 +179,8 @@ article {
     main:article:skills
  */
 
-.language-list {
+.language-list,
+.tool-list {
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -184,7 +190,8 @@ article {
     position: relative;
 }
 
-.language-item {
+.language-item,
+.tool-item {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -196,7 +203,8 @@ article {
     min-width: 128px;
 }
 
-.language-item img {
+.language-item img,
+.tool-item img {
     width: 48px;
     height: 48px;
 }
