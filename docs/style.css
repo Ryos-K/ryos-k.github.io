@@ -205,6 +205,56 @@ article {
     main:article:history
  */
 
+ 
+.education-content,
+.qualification-content {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    position: relative;
+    width: 50%;
+    margin: 16px 0;
+}
+
+.education-content::before,
+.qualification-content::before {
+    content: '';
+    position: absolute;
+    top: 0.5em;
+    left: -24px;
+    width: calc(100% + 48px);
+    height: calc(100%);
+    background: linear-gradient(0deg, rgb(72, 216, 204) 0%, rgb(149, 233, 215) 100%);
+    z-index: -1;
+}
+
+.education-content::before {
+    animation: wavy-box-animation1 60s infinite ease-in-out;
+}
+
+.qualification-content::before {
+    animation: wavy-box-animation2 60s infinite ease-in-out;
+}
+
+.education-content h3,
+.qualification-content h3 {
+    margin-left: 20%;
+    padding: 0 16px 0 48px;
+    width: fit-content;
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+.education-list,
+.qualification-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4px 0;
+    width: 100%;
+    position: relative;
+}
+
 .history-info-box {
     background-color: transparent;
     border: 2px solid rgb(0, 0, 0);
@@ -212,8 +262,7 @@ article {
     padding: 24px;
     padding-top: 8px;
     margin: 10px;
-    width: 50%;
-    min-width: 256px;
+    width: 100%;
     position: relative;
 }
 
@@ -227,47 +276,6 @@ article {
     top: -8px;
     left: 8px;
     z-index: -1;
-}
-
-.education,
-.qualification {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    width: 100%;
-}
-
-
-.education::before,
-.qualification::before {
-    content: '';
-    position: absolute;
-    top: 1em;
-    left: 20%;
-    width: 60%;
-    height: calc(100% - 2em);
-    background: linear-gradient(0deg, rgb(72, 216, 204) 0%, rgb(149, 233, 215) 100%);
-    z-index: -1;
-}
-
-.education::before {
-    animation: wavy-box-animation1 60s infinite ease-in-out;
-}
-
-.qualification::before {
-    animation: wavy-box-animation2 60s infinite ease-in-out;
-}
-
-.education-list,
-.qualification-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 16px 0 32px 0;
-    width: 100%;
-    position: relative;
 }
 
 
