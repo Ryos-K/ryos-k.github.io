@@ -1,10 +1,5 @@
 @charset "UTF-8";
 
-body {
-    margin: 0;
-    padding: 0;
-}
-
 /*
     header 
  */
@@ -75,12 +70,21 @@ main {
     }
 }
 
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 16px;
+}
+
 .section-title {
     position: relative;
     text-align: center;
     padding: 0 32px;
     font-size: xx-large;
     white-space: nowrap;
+    width: 100%;
 }
 
 .section-title span {
@@ -166,6 +170,37 @@ article {
     min-width: 256px;
 }
 
+/* 
+    main:article:skills
+ */
+
+.language-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 16px 0;
+    position: relative;
+}
+
+.language-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: white;
+    margin: 8px;
+    width: 20%;
+    min-width: 128px;
+}
+
+.language-item img {
+    width: 48px;
+    height: 48px;
+}
+
 /*
     main:article:history
  */
@@ -194,6 +229,36 @@ article {
     z-index: -1;
 }
 
+.education,
+.qualification {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+
+.education::before,
+.qualification::before {
+    content: '';
+    position: absolute;
+    top: 1em;
+    left: 20%;
+    width: 60%;
+    height: calc(100% - 2em);
+    background: linear-gradient(0deg, rgb(72, 216, 204) 0%, rgb(149, 233, 215) 100%);
+    z-index: -1;
+}
+
+.education::before {
+    animation: wavy-box-animation1 60s infinite ease-in-out;
+}
+
+.qualification::before {
+    animation: wavy-box-animation2 60s infinite ease-in-out;
+}
+
 .education-list,
 .qualification-list {
     list-style: none;
@@ -201,27 +266,8 @@ article {
     flex-direction: column;
     align-items: center;
     margin: 16px 0 32px 0;
+    width: 100%;
     position: relative;
-}
-
-.education-list::before,
-.qualification-list::before {
-    content: '';
-    position: absolute;
-    top: 1em;
-    left: 20%;
-    width: 60%;
-    height: calc(100% + 16px - 1em);
-    background: linear-gradient(0deg, rgb(72, 216, 204) 0%, rgb(149, 233, 215) 100%);
-    z-index: -1;
-}
-
-.education-list::before {
-    animation: wavy-box-animation1 60s infinite ease-in-out;
-}
-
-.qualification-list::before {
-    animation: wavy-box-animation2 60s infinite ease-in-out;
 }
 
 
