@@ -39,7 +39,7 @@ header {
 .header-nav-item a {
     color: white;
     text-decoration: none;
-    font-size: x-large;
+    font-size: large;
     margin: 0 10px;
 }
 
@@ -67,18 +67,8 @@ header {
 main {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     width: 100%;
-
-}
-
-.main-content {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
-    width: 100%;
-    max-width: 1200px;
-    padding: 2px;
-    align-items: center;
 }
 
 section {
@@ -136,7 +126,7 @@ section {
  */
 
 aside {
-    width: 300px;
+    width: 320px;
     min-height: 100vh;
     background: linear-gradient(180deg, rgb(172, 212, 204) 0%, rgb(117, 171, 175) 100%);
 }
@@ -244,7 +234,7 @@ article {
     flex-direction: column;
     align-items: left;
     position: relative;
-    width: max(50%, 256px);
+    width: clamp(256px, 70%, 600px);
     margin: 16px 0;
 }
 
