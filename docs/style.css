@@ -47,6 +47,19 @@ header {
     color: darkseagreen;
 }
 
+/* 
+    container
+ */
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: min(100%, 1200px);
+    height: 100%;
+    margin: 0 auto;
+}
+
 /*
     main
  */
@@ -122,16 +135,15 @@ section {
     main:home
  */
 
-.home {
-    position: fixed;
-    top: 64px;
-    left: clac(max(100vw - 1200px, 0) / 2);
+aside {
     width: 300px;
-    height: 100%;
-    border-right: 2px solid rgb(0, 0, 0);
+    min-height: 100vh;
+    background: linear-gradient(180deg, rgb(172, 212, 204) 0%, rgb(117, 171, 175) 100%);
 }
 
 .profile {
+    position: sticky;
+    top: calc(64px + 16px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -147,6 +159,19 @@ section {
     height: 100px;
     border-radius: 50%;
     margin: 16px;
+}
+
+.account-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 16px 0;
+}
+
+.account-item a img{
+    padding: 8px;
+    width: 48px;
 }
 
 .location {
@@ -172,7 +197,6 @@ article {
     width: 90%;
     padding: 16px 0;
     min-width: 256px;
-    margin-left: 300px;
 }
 
 /* 
