@@ -115,7 +115,7 @@ section {
     width: max(40%, 200px);
     height: 12px;
     transform: skew(-30deg);
-    background-color: rgb(47, 212, 204);
+    background: radial-gradient(circle, rgb(0, 255, 157) 0%, rgb(75, 204, 193) 100%);
 }
 
 /* 
@@ -232,7 +232,7 @@ article {
     left: -24px;
     width: calc(100% + 48px);
     height: calc(100%);
-    background: linear-gradient(0deg, rgb(72, 216, 204) 0%, rgb(149, 233, 215) 100%);
+    background: linear-gradient(-120deg, rgb(72, 216, 204) 0%, rgb(149, 233, 215) 100%);
     z-index: -1;
 }
 
