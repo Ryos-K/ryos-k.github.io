@@ -1,14 +1,16 @@
 {
   "name": "ryos-k.github.io",
+  "homepage": "https://ryos-k.github.io/",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "directories": {
     "doc": "docs"
   },
+  "source": "src/index.html",
   "scripts": {
-    "dev": "parcel src/index.html --open",
-    "build": "parcel src/build index.html"
+    "deploy": "npm run build && gh-pages -d build",
+    "dev": "parcel serve --open",
+    "build": "parcel build --dist-dir build"
   },
   "keywords": [],
   "author": "",
